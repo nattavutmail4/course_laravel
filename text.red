@@ -25,7 +25,8 @@
     php artisan migrate:fresh --seed เป็นการสร้าง migration และ seed ข้อมูล พร้อมกัน
     php artisan make:factory ชื่อไฟล์ -> PostFactory เหมาะสำหรับ random ข้อมูล 
 
-
+  5 การสร้าง Model สำหรับผูกกับตาราง
+     คำสั่ง php artisan make::model  ชื่อ model 
    
 
 

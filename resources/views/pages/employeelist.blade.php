@@ -1,7 +1,7 @@
 <!-- การเรียกใช้งาน Tempate -->
 @extends('layouts.main_template')
 @section('title')
-    รายชื่อพนักงาน
+    พนักงาน
 @endsection
 @section('content')
     <div class="jumbotron">
@@ -45,3 +45,4 @@
         {{ $employees->links('pagination::bootstrap-4') }}
     </div>
 @endsection
+
