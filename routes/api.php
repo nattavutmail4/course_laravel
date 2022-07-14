@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\PhotoController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use Psy\Readline\Hoa\Protocol;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,7 +15,12 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+// Route::get('/photos',[PhotoController::class,'index']);
+// Route::post('/photos',[PhotoController::class,'store']);
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::resource('/photos',PhotoController::class);
+Route::get('/photos/search/{keyword}',[PhotoController::class,'search']);
+
+// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+//     return $request->user();
+// });

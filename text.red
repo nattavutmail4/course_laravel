@@ -3,10 +3,14 @@
     php artisan serve
  1 การสร้าง Controller
     php artisan make:controller [Name]Controller
+    php artisan make:controller [NameController] --resource 
  2 คำสั่งสำหรับเปิดปิดระบบ 
     php artisan up เปิด  ปิด php artisan down
  3 คำสั่งดู routes ทีมี
     php artisan route:list
+    php artisan route:list --path=api เป็น routes ที่ใช้สำหรับ route ที่ api
+    php artisan route:list --path=api --method=post  เป็น routes ที่ใช้สำหรับ route ที่ api และแสดง method ที่เป็น post 
+
  4 คำสั่งเกี่ยวกับการสร้างฐานข้อมูล
     php artisan make:migration create_ชื่อเทเบิ้ล_table
     php artisan make:migration  ชื่อไฟล์อะไรก็ได้ หมายเหตุตำแหน่งไฟล์อยู่ที่ database/migrations
@@ -32,7 +36,8 @@
 
 
 
-
+  $employees = Employee::all();
+        return view('pages.employeelist', compact('employees'));
 
 //คำสั่ง laravel ทั้งหมด 
 Available commands:
